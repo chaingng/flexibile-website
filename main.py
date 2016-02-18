@@ -10,7 +10,17 @@ html = t.render({
     'maplat' : config.maplat,
     'maplon' : config.maplon,
     'map_info' : config.map_info,
-    'footer_on' : False
+    'smartphone_on' : False,
+    'contact_on' : True,
+    'contact_location' : config.contact_location,
+    'counter_on' : False,
+    'summary_on' : True,
+    'review_on' : False,
+    'portfolio_on' : True,
+    'shots_on' : False,
+    'buyitnow_on' : False,
+    'map_on' : True,
+    'skills_on' : False
          })
 #print 'Content-Type: text/html; charset=utf-8\n'
 
