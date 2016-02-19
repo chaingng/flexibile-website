@@ -12,6 +12,8 @@ html = t.render({
     'map_info' : config.map_info,
     'smartphone_on' : False,
     'summary' : config.summary,
+    'portfolio' : config.portfolio,
+    'top' : config.top,
     'contact_on' : True,
     'contact_location' : config.contact_location,
     'contact_comment' : config.contact_comment,
