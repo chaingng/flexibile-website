@@ -12,7 +12,7 @@ map_info=u"東京都墨田区"
 top = []
 top.append({
     'title' : u"Beetle",
-    'detail': u"HTML5 template for landing page, blog and resume",
+    'detail': u"安心と快適",
     'img' : 'img/custom/top.jpg'
 })
 top.append({
@@ -34,37 +34,38 @@ summary = {
 #portfolio
 portfolio = []
 portfolio.append({
-    'title' : u"リフォーム",
+    'title' : u"リフォーム1",
     'detail': u"お客様のライフスタイルに合わせた住まいを提案致します。",
-    'img' : 'img/custom/1.jpg'
+    'img' : 'img/custom/3.jpg'
 })
 portfolio.append({
     'title' : u"リフォーム2",
     'detail': u"お客様のライフスタイルに合わせた住まいを提案致します。",
-    'img' : 'img/custom/1.jpg'
+    'img' : 'img/custom/2.jpg'
 })
 portfolio.append({
-    'title' : u"リフォーム",
+    'title' : u"リフォーム3",
     'detail': u"お客様のライフスタイルに合わせた住まいを提案致します。",
-    'img' : 'img/custom/1.jpg'
+    'img' : 'img/custom/3.jpg'
 })
 portfolio.append({
-    'title' : u"リフォーム",
+    'title' : u"リフォーム4",
     'detail': u"お客様のライフスタイルに合わせた住まいを提案致します。",
-    'img' : 'img/custom/1.jpg'
+    'img' : 'img/custom/4.jpg'
 })
 portfolio.append({
-    'title' : u"リフォーム",
+    'title' : u"リフォーム5",
     'detail': u"お客様のライフスタイルに合わせた住まいを提案致します。",
-    'img' : 'img/custom/1.jpg'
+    'img' : 'img/custom/2.jpg'
 })
 portfolio.append({
-    'title' : u"リフォーム",
+    'title' : u"リフォーム6",
     'detail': u"お客様のライフスタイルに合わせた住まいを提案致します。",
-    'img' : 'img/custom/1.jpg'
+    'img' : 'img/custom/6.jpg'
 })
 
 
 #contact
+contact_company=u"スカイツリー"
 contact_location=u"〒131-0045 東京都墨田区押上１丁目１−２"
 contact_comment=u"住まい全般についてのご質問やご相談など、お電話とフォームにてお問い合わせいただけます。"
