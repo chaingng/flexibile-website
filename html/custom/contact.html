@@ -4,16 +4,17 @@
 						<div class="section-title"><h3>お問い合わせ</h3></div>
 						<p>{{contact_comment }}</p>
 						<div class="column nine">
-							<form id="contact-form" class="contact-section" method="post" action="">
+							<form id="myForm" class="contact-section" name="myFormName">
 								<span class="pre-input"><i class="icon icon-user"></i></span>
-								<input class="name plain buffer" type="text" name="name" placeholder="お名前">
+								<input class="name plain buffer" type="text" id="myname" name="name" placeholder="お名前">
 								<span class="pre-input"><i class="icon icon-email"></i></span>
-								<input class="email plain buffer" type="email" name="email" placeholder="メールアドレス">
-								<textarea class="plain buffer" name="message" placeholder="お問い合わせありがとうございます"></textarea>
-								<input id="send" class="plain button red" type="button" value="送信">
+								<input class="email plain buffer" type="email" id="myemail" name="email" placeholder="メールアドレス">
+								<textarea class="plain buffer" id="mymessage" name="message" placeholder="お問い合わせありがとうございます"></textarea>
+								<input type="button" class="plain button red"  value="送信" id="mybutton">
 							</form>
 							<div id="success"></div>
 						</div>
+
 						<div class="column three last">
 							<div class="widget">
 								<h4>会社</h4>
@@ -32,14 +33,14 @@
 							<div class="widget">
 								<h4>電話番号</h4>
 								<p>
-									00-0000-0000
+									{{contact_tel}}
 								</p>
 							</div>
 
 							<div class="widget">
-								<h4>FAX</h4>
+								<h4>提供エリア実績</h4>
 								<p>
-									00-0000-0000
+									神戸市北区・神戸市須磨区・神戸市垂水区・神戸市中央区・ 神戸市長田区・神戸市灘区・神戸市西区・神戸市東灘区・ 神戸市兵庫区・三田市・明石市・その他
 								</p>
 							</div>
 

@@ -1,0 +1,13 @@
+			<div id="intro-wrap">
+				<div id="intro" class="preload darken" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fadeUp">
+
+					{% for item in top %}
+					<div class="intro-item" style="background-image: url({{item.img}});"">
+						<div class="caption">
+							<h2>{{item.title}}</h2>
+							<p>{{item.detail}}</p>
+						</div><!-- caption -->
+					</div>
+					{% endfor %}
+				</div><!-- intro -->
+			</div><!-- intro-wrap -->

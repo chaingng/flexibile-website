@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="The Page Description">
+		<style type="text/css">@-ms-viewport{width: device-width;}</style>
+		<title>my-title</title>
+		<link rel="stylesheet" href="css/layers.min.css" media="screen">
+		<link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
+		<link rel="stylesheet" href="style.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		<link rel="icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
+
+
+				<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/beetle.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			$("#mybutton").click( function(){
+				if( !$("#myname").val() || !$("#myemail").val() || !$("#mymessage").val()){
+					alert('未入力の項目があります');
+					return;
+				}
+            	var JSONdata = {
+                	"name" : $("#myname").val(),
+                	"email" : $("#myemail").val(),
+                	"message" : $("#mymessage").val()
+            	};
+
+            	var request = $.ajax({
+        			type : 'post',
+        			url : 'https://0rk0gl9vz4.execute-api.us-west-2.amazonaws.com/test/mydemoresource',
+        			data : JSON.stringify(JSONdata),
+        			dataType: 'json'
+        		});
+
+    			request.done(function(data, textStatus, jqXHR){
+  					alert('お問い合わせありがとうございました。');
+  					$("#myForm").submit();
+				});
+				request.fail(function( jqXHR, textStatus, errorThrown ) {
+  					alert('error:'+jqXHR+' '+ textStatus+ ' '+errorThrown);
+				});
+        	});
+		})
+		</script>
+	</head>
+
+	<body class="page">
+
+		<header role="banner" class="transparent light">
+			<div class="row">
+				<div class="nav-inner row-content buffer-left buffer-right even clear-after">
+					<div id="brand">
+						<h1 class="reset"><!--<img src="img/logo.png" alt="logo">--><a href="home-01.html">my-title</a></h1>
+					</div><!-- brand -->
+					<a id="menu-toggle" href="#"><i class="fa fa-bars fa-lg"></i></a>
+					<nav>
+						<ul class="reset" role="navigation">
+							<li class="menu-item"><a href="#intro-wrap">Home</a></li>
+							<li class="menu-item"><a href="#portfolio-section">建築実例</a></li>
+							<li class="menu-item"><a href="#contact-section">お問い合わせ</a></li>
+						</ul>
+					</nav>
+				</div><!-- row-content -->
+			</div><!-- row -->
+		</header>
+
+		<main role="main">
+						<div id="intro-wrap">
+				<div id="intro" class="preload darken" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fadeUp">
+
+					
+					<div class="intro-item" style="background-image: url(img/custom/top.jpg);"">
+						<div class="caption">
+							<h2>Beetle</h2>
+							<p>安心と快適</p>
+						</div><!-- caption -->
+					</div>
+					
+					<div class="intro-item" style="background-image: url(img/custom/1.jpg);"">
+						<div class="caption">
+							<h2>リフォーム2</h2>
+							<p>お客様のライフスタイルに合わせた住まいを提案致します。</p>
+						</div><!-- caption -->
+					</div>
+					
+				</div><!-- intro -->
+			</div><!-- intro-wrap -->
+
+			<div id="main">
+
+				
+								<section class="row section">
+					<div class="row-content buffer even clear-after">
+						<div class="column four">
+							<div class="small-icon red"><i class="icon icon-paperfly"></i></div>
+							<div class="small-icon-text clear-after">
+								<h4>リフォーム</h4>
+								<p class="text-xs">お客様のライフスタイルに合わせた住まいを提案致します。</p>
+							</div>
+						</div>
+						<div class="column four">
+							<div class="small-icon red"><i class="icon icon-diamond"></i></div>
+							<div class="small-icon-text clear-after">
+								<h4>安心の耐震性</h4>
+								<p class="text-xs">住宅の振動実験を行い強度を検証しています。</p>
+							</div>
+						</div>
+						<div class="column four last">
+							<div class="small-icon red"><i class="icon icon-crown"></i></div>
+							<div class="small-icon-text clear-after">
+								<h4>価格</h4>
+								<p class="text-xs">お客様の予算内でのリーズナブルな価格でご提供します。</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+
+				
+				<div id="portfolio-section" class="parallax contact-container" data-stellar-background-ratio="0.3">
+				<section class="row section">
+					<div class="row-content buffer even clear-after">
+						<div class="section-title"><h3>建築実例</h3></div>
+						<div class="grid-items blog-section masonry-style preload">
+
+							
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/custom/3.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">リフォーム1</h5>
+											<h2>お客様のライフスタイルに合わせた住まいを提案致します。</h2>
+										</div><!-- blog-excerpt -->
+									</div><!-- blog-excerpt-inner -->
+								</a>
+							</article>
+							
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/custom/2.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">リフォーム2</h5>
+											<h2>お客様のライフスタイルに合わせた住まいを提案致します。</h2>
+										</div><!-- blog-excerpt -->
+									</div><!-- blog-excerpt-inner -->
+								</a>
+							</article>
+							
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/custom/3.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">リフォーム3</h5>
+											<h2>お客様のライフスタイルに合わせた住まいを提案致します。</h2>
+										</div><!-- blog-excerpt -->
+									</div><!-- blog-excerpt-inner -->
+								</a>
+							</article>
+							
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/custom/4.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">リフォーム4</h5>
+											<h2>お客様のライフスタイルに合わせた住まいを提案致します。</h2>
+										</div><!-- blog-excerpt -->
+									</div><!-- blog-excerpt-inner -->
+								</a>
+							</article>
+							
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/custom/2.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">リフォーム5</h5>
+											<h2>お客様のライフスタイルに合わせた住まいを提案致します。</h2>
+										</div><!-- blog-excerpt -->
+									</div><!-- blog-excerpt-inner -->
+								</a>
+							</article>
+							
+							<article class="item column six">
+								<a href="#">
+									<figure><img src="img/custom/6.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
+									<div class="blog-excerpt">
+										<div class="blog-excerpt-inner">
+											<h5 class="meta-post">リフォーム6</h5>
+											<h2>お客様のライフスタイルに合わせた住まいを提案致します。</h2>
+										</div><!-- blog-excerpt -->
+									</div><!-- blog-excerpt-inner -->
+								</a>
+							</article>
+							
+
+							<div class="shuffle-sizer three"></div>
+						</div><!-- grid-items -->
+					</div>
+				</section>
+</div>
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+				<section class="row section">
+    <div class="map" data-maplat=35.7105593 data-maplon=139.8107326 data-mapzoom="15" data-color="" data-height="22.222" data-img="img/marker.png" data-info="東京都墨田区"></div>
+</section>
+				
+
+				
+				<div id="contact-section" class="parallax contact-container" data-stellar-background-ratio="0.3">
+<section class="row section">
+					<div class="row-content buffer even clear-after">
+						<div class="section-title"><h3>お問い合わせ</h3></div>
+						<p>住まい全般についてのご質問やご相談など、お電話とフォームにてお問い合わせいただけます。</p>
+						<div class="column nine">
+							<form id="myForm" class="contact-section" name="myFormName">
+								<span class="pre-input"><i class="icon icon-user"></i></span>
+								<input class="name plain buffer" type="text" id="myname" name="name" placeholder="お名前">
+								<span class="pre-input"><i class="icon icon-email"></i></span>
+								<input class="email plain buffer" type="email" id="myemail" name="email" placeholder="メールアドレス">
+								<textarea class="plain buffer" id="mymessage" name="message" placeholder="お問い合わせありがとうございます"></textarea>
+								<input type="button" class="plain button red"  value="送信" id="mybutton">
+							</form>
+							<div id="success"></div>
+						</div>
+
+						<div class="column three last">
+							<div class="widget">
+								<h4>会社</h4>
+								<p>
+									スカイツリー
+								</p>
+							</div>
+
+							<div class="widget">
+								<h4>住所</h4>
+								<p>
+									〒131-0045 東京都墨田区押上１丁目１−２
+								</p>
+							</div>
+
+							<div class="widget">
+								<h4>電話番号</h4>
+								<p>
+									00-0000-0000
+								</p>
+							</div>
+
+							<div class="widget">
+								<h4>FAX</h4>
+								<p>
+									00-0000-0000
+								</p>
+							</div>
+
+
+						</div>
+					</div>
+				</section>
+	</div>
+				
+
+			</div><!-- id-main -->
+		</main><!-- main -->
+
+		<footer role="contentinfo">
+			<div class="row">
+				<div class="row-content buffer clear-after">
+					<section id="bottom-footer">
+						<p class="keep-left">&copy; 2014 <a href="http://mokaine.com/" alt="Mokaine Lab">Mokaine</a>. All Rights Reserved.</p>
+						<p class="keep-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+					</section><!-- bottom-footer -->
+				</div><!-- row-content -->
+			</div><!-- row -->
+		</footer>
+
+	</body>
+
+</html>
