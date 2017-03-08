@@ -27,7 +27,7 @@ history = {
     'summary' : u"Specialties : User experience design, user interface design, brand identity, typography, print and packaging design, web standards, grid based layout.",
     'item' : [
         {
-            'year' : u'2013',
+            'year' : u'2014',
             'company' : u'フードコーディネータ専門学校',
             'role' : u'Food Coordinator',
             'detail' : u'October 2013 – November 2013 (2 months)Menlo Park, CA, United States of America'
