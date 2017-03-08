@@ -11,6 +11,7 @@ html = t.render({
     'portfolio' : config.portfolio,
     'top' : config.top,
     'map' : config.map,
+    'history' : config.history,
     'contact_location' : config.contact_location,
     'contact_company' : config.contact_company,
     'contact_comment' : config.contact_comment,
@@ -26,6 +27,7 @@ html = t.render({
     'shots_on' : config.shots_on,
     'buyitnow_on' : config.buyitnow_on,
     'map_on' : config.map_on,
+    'history_on' : config.history_on,
     'skills_on' : config.skills_on
 })
 

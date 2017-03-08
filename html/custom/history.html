@@ -1,0 +1,26 @@
+<div id="experience-section" class="parallax contact-container" data-stellar-background-ratio="0.3">
+<section class="row section">
+      <div class="row-content buffer even clear-after">
+        <div class="timeline-label column six">
+          <h4>{{history.title}}</h4>
+          <p>{{history.summary}}</p>
+        </div>
+        <div class="timeline column six last">
+          {% for item in history.item %}
+          <div class="year">
+            <time datetime="{{item.year}}">{{item.year}}</time>
+            <div class="experience">
+              <span class="circle"></span>
+              <div class="experience-img"><img src="http://placehold.it/120x120/ddd/fff&text=Beetle%20image" alt=""></div>
+              <div class="experience-info clear-after">
+                <h5>{{item.company}}</h5>
+                <div class="role">{{item.role}}</div>
+                <p>{{item.detail}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+</div>
